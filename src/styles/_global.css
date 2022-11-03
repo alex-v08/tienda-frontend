@@ -1,0 +1,26 @@
+:root{
+    --primaryColor:#191E29;
+    --secundaryColor:#132D46;
+    --terciaryColor:#01c38D;
+    --backgroundColor:#fff;
+    --primaryFont:  'Roboto', sans-serif;    
+    --headerHeight: 100px;
+    --asideWidth: 200px;
+}
+
+html{
+    box-sizing: border-box; 
+    font-size: 62.5%; /* hack 1rem = 10px */
+    font-family: var(--primaryFont); 
+}
+
+*, *:before, *:after{
+    box-sizing:inherit; 
+    margin: 0;
+    padding: 0;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}

@@ -1,0 +1,21 @@
+.unauthorized{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.unauthorized h1{
+    font-size: 10rem;
+    font-family: 'Victor Mono';
+    filter: drop-shadow(0 0 0.75rem var(--secundaryColor));
+}
+
+
+.unauthorized a{
+    font-size: 5rem;
+    font-family: 'Victor Mono';
+    filter: drop-shadow(0 0 0.75rem var(--secundaryColor));
+}
+

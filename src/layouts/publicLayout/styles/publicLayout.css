@@ -1,0 +1,5 @@
+#publicLayout{    
+    width: 100vw;
+    height: 100vh;
+    background-image: linear-gradient(0deg, var(--terciaryColor) 5%, var(--primaryColor) 100%); 
+}
