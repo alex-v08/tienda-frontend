@@ -2,7 +2,7 @@ import "./styles/authLayout.css";
 import cart from "../../assets/cart.svg"
 import 'victormono'
 
-export const AuthLayout = (children) => {
+export const AuthLayout = async (children) => {
   return `<div class="authLayout">
             <header>
                 <div class="brand" id="">
@@ -21,13 +21,13 @@ export const AuthLayout = (children) => {
                 </div>
             </header>           
             <nav>
-                <a href="/prueba"> Boton 1</a>                
+                <a href="/"> Inicio</a>                
                 <a href="#"> Boton 2</a>
                 <a href="#"> Boton 3</a>
                 <a href="#"> Boton 4</a>                
             </nav>
             <main>            
-                ${children()}
+                ${await children()}
             </main>
          </div>
     `;

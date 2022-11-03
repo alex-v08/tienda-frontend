@@ -4,6 +4,8 @@ export * from "./NotFound/NotFound";
 export * from "./Unauthorized/Unauthorized";
 export * from "./Tickets/Tickets";
 export * from "./ViewTicket/ViewTicket";
+export * from "./Producto/Producto";
+
 
 
 
