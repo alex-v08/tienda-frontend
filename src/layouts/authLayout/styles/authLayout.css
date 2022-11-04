@@ -1,5 +1,4 @@
-.authLayout{    
-    width: 100vw;
+.authLayout{ 
     background-image: linear-gradient(0deg, var(--terciaryColor) 5%, var(--primaryColor) 100%);
     display: grid;
     grid-template-areas:
@@ -7,33 +6,23 @@
     'nav nav'
     'main main';
     overflow-x: hidden;
+    font-family: 'Victor Mono';
 }
 
-nav{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #191e2987;
-    
+.authLayout,
+.authLayout nav,
+.authLayout header,
+.authLayout main{
     width: 100vw;    
-    height: 40px;
-    gap:2rem;
+}
+
+.authLayout nav{
+    grid-area: nav; 
+    background-color: #191e2987;    
+    height: var(--navHeight);
     position: sticky;
     top: 0;
     z-index: 1;
-}
-
-nav a{
-    color:#fff;
-    text-decoration: none;
-    font-family: 'Victor Mono';
-    font-size: 1.5rem;
-    filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
-}
-
-nav a:hover{    
-    filter: none;
-    height: 60%;
 }
 
 .authLayout header{
@@ -42,101 +31,25 @@ nav a:hover{
     flex-wrap: wrap;
     justify-content: space-between;
     padding:0 4rem 0 4rem;    
-    height: var(--headerHeight);
-    width: 100vw;   
-    
+    height: var(--headerHeight);    
     z-index: 1;
-}
-
-header .brand{
-    display: flex;
-    align-items:center;
-    font-family: 'Victor Mono';
-    font-weight: 800;
-    color:#fff;
-    gap:1rem;
-    font-size: 3rem;
-    cursor: pointer;
-    filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
-}
-
-header .userProfile{
-    display: flex;
-    align-items:center;
-    gap:2rem;
-}
-
-.userProfile img{
-    width: 5rem;
-    height: 5rem;
-    object-fit:cover;
-    border-radius: 50%;
-    border:3px var(--terciaryColor) solid;    
-    filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
-    cursor: pointer;
-}
-
-.userProfile .cart{
-    width: 3rem;
-    height: 3rem;
-    object-fit:cover;  
-    border:none;            
-    cursor: pointer;
-}
-
-
-
-.userProfile .info
-{
-    color:#fff;
-    display: flex;
-    flex-direction: column;
-    gap:0.5rem;
-    font-size: 1.2rem;
-    letter-spacing: 0.2rem;
-    filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
-
 }
 
 .authLayout main{
     grid-area: main; 
-    /* background-color:var(--backgroundColor); */
-    width: 100vw;  
-    height: calc(100vh - var(--headerHeight) - 30px);
+    height: calc(100vh - var(--headerHeight) - var(--navHeight));
 }
-
-header .brand .logo{
-    display: none;
-}
-
 
 
 @media screen and (max-width: 780px) {
     .authLayout{               
         grid-template-areas:
         'header header'
-        'aside aside'
+        'nav nav'        
         'main main';
-    }
-
-    .authLayout aside{
-        width: 100vw;
-        height: var(--headerHeight);
-    }
+    }     
 
     .authLayout header{
         filter: none;
-    }
-
-    .userProfile .info{
-        display: none;
-    }
-
-    header .brand .title{
-        display: none;
-    }
-
-    header .brand .logo{
-        display: block;
-    }
+    } 
 }

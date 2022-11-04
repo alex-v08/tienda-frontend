@@ -9,7 +9,7 @@
     width: 800px;
     flex-direction: column;
     background-color:var(--primaryColor);
-    border-radius: 1rem;
+    border-radius: 2rem;
     filter: drop-shadow(0 0 0.75rem var(--primaryColor));    
     justify-content: space-between;
 }
@@ -23,7 +23,7 @@
 #producto figure img{
     height: 300px;
     width: 100%;   
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 2rem 2rem 0 0;
     object-fit: cover;
 }
 
@@ -50,8 +50,8 @@
     padding: 1rem;
     background: var(--primaryColor);    
     position: absolute;
-    top:20px;
-    left: -20px;
+    top:4rem;
+    left: -2rem;
     filter: drop-shadow(0 0 0.75rem #000000);
     border-radius: 1rem;    
 }

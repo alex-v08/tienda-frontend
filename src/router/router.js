@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
   router();
 });
 
-const navigateTo = (url) => {
+export const navigateTo = (url) => {
   history.pushState(null, null, url);
   router();
 };

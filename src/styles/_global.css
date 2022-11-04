@@ -4,7 +4,8 @@
     --terciaryColor:#01c38D;
     --backgroundColor:#fff;
     --primaryFont:  'Roboto', sans-serif;    
-    --headerHeight: 100px;
+    --headerHeight: 10rem;
+    --navHeight: 4rem;
     --asideWidth: 200px;
 }
 

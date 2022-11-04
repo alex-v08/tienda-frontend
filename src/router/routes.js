@@ -1,5 +1,5 @@
 import { AuthLayout, PublicLayout } from "../layouts";
-import { Home, Login, NotFound, ViewTicket, Tickets, Unauthorized, Producto } from "../pages";
+import { Home, Login, NotFound, Unauthorized, Producto, Cart } from "../pages";
 
 export const routes = [
   {
@@ -17,6 +17,10 @@ export const routes = [
   {
     path: "/producto/:id",
     page: (params) => AuthLayout(async () => await Producto(params)),
+  },
+  {
+    path: "/cart",
+    page:  () => AuthLayout(Cart),    
   },
 ];
 
