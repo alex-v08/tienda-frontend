@@ -10,5 +10,10 @@ export const Cart = async() => {
                 <div class="items">
                     ${productos.map((producto) => Item(producto)).join(" ")}    
                 </div>
+                <div class="total">
+                    <strong>$ 480</strong>
+                    <h1> PAGAR </h1>
+
+                </div>            
             </div>`;     
 } 

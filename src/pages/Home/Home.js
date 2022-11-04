@@ -1,7 +1,7 @@
 import './styles/home.css';
 import slider from "../../assets/slider.jpg"
 import video from "../../assets/video.mp4"
-import { productos } from '../../components/Cards/Mock/productos';
+import { productos } from '../../assets/Mock/productos';
 import { Cards } from '../../components';
 
 export const Home = () => {

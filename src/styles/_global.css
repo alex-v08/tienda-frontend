@@ -25,3 +25,11 @@ a{
     text-decoration: none;
     color:inherit;
 }
+
+.overflow-ellipsis {
+    text-overflow: ellipsis;
+}
+
+input {
+    all: unset;
+}

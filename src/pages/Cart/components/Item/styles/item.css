@@ -1,9 +1,12 @@
 .item{
     display: flex;
+    gap:2rem;    
     width: 100%;
     background: var(--primaryColor);
     border-radius: 1rem;   
     filter: drop-shadow(0 0 0.75rem var(--primaryColor));    
+    align-items: center;
+    padding-right: 3rem;;
 }
 
 .item img{
@@ -15,6 +18,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+   
     gap:1rem;
     padding: 1rem;
     background: var(--primaryColor);
@@ -22,3 +26,36 @@
     font-family: 'Victor Mono';    
     border-radius: 0 1rem 1rem 0; 
 }
+
+.item  p{
+    max-width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 1.2rem;
+}
+
+.item .tools{    
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    min-width: 150px;
+    gap:2rem;
+}
+
+
+.tools input {
+    background: #fff;
+    width: 50px;
+    height: 30px;
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    text-align: center;
+    border-radius: 1rem;
+    font-weight: 800;;
+    filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
+  }
+
+  .tools strong{
+    color:#fff;
+    font-size: 2rem;
+  }

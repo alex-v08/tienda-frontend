@@ -1,6 +1,6 @@
-import { productos } from "../../../components/Cards/Mock/productos";
+import { carrito } from "../../../assets/Mock/carrito";
 
 export const getProductos = async () => {
     
-    return productos;
+    return carrito;
 }
