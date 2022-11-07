@@ -6,7 +6,8 @@
     border-radius: 1rem;   
     filter: drop-shadow(0 0 0.75rem var(--primaryColor));    
     align-items: center;
-    padding-right: 3rem;;
+    padding-right: 3rem;
+    position: relative;
 }
 
 .item img{
@@ -43,19 +44,33 @@
 }
 
 
-.tools input {
-    background: #fff;
+ .tools input {    
     width: 50px;
     height: 30px;
-    font-size: 1.5rem;
-    padding: 0.5rem;
-    text-align: center;
-    border-radius: 1rem;
-    font-weight: 800;;
-    filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
   }
 
   .tools strong{
     color:#fff;
     font-size: 2rem;
+  }
+
+  .item .close{    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+    font-size: 2rem;
+    position: absolute;
+    right: 1rem;
+    top:1rem;
+    cursor: pointer;
+    background: var(--primaryColor);
+    width: 3rem;
+    height: 3rem;    
+    border-radius: 50%;
+    padding: 2px 2px 4px 2px;
+  }
+
+  .item .close:hover{  
+    transform: scale(1.1);
   }

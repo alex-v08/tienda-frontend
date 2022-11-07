@@ -1,18 +1,26 @@
 import { AuthLayout, PublicLayout } from "../layouts";
-import { Home, Login, NotFound, Unauthorized, Producto, Cart } from "../pages";
+import {
+  Home,
+  Login,
+  NotFound,
+  Unauthorized,
+  Producto,
+  Cart,
+  Productos,
+} from "../pages";
 
 export const routes = [
   {
     path: "/",
-    page:  () => AuthLayout(Home),
+    page: () => AuthLayout(Home),
   },
   {
     path: "/login",
-    page:  () =>  PublicLayout(Login),
+    page: () => PublicLayout(Login),
   },
   {
     path: "/unauthorized",
-    page:  () =>  PublicLayout(Unauthorized),
+    page: () => PublicLayout(Unauthorized),
   },
   {
     path: "/producto/:id",
@@ -20,7 +28,11 @@ export const routes = [
   },
   {
     path: "/cart",
-    page:  () => AuthLayout(Cart),    
+    page: () => AuthLayout(Cart),
+  },
+  {
+    path: "/productos",
+    page: () => AuthLayout(Productos),
   },
 ];
 

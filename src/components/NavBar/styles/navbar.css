@@ -3,6 +3,7 @@
     justify-content: center;
     align-items: center;
     gap:2rem;
+    padding: 1rem;
 }
 
 .navbar a{
@@ -11,6 +12,7 @@
     font-family: 'Victor Mono';
     font-size: 1.5rem;
     filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
+
 }
 
 .navbar a:hover{    

@@ -3,7 +3,7 @@
     --secundaryColor:#132D46;
     --terciaryColor:#01c38D;
     --backgroundColor:#fff;
-    --primaryFont:  'Roboto', sans-serif;    
+    --primaryFont:  'Victor Mono', sans-serif;    
     --headerHeight: 10rem;
     --navHeight: 4rem;
     --asideWidth: 200px;
@@ -32,4 +32,32 @@ a{
 
 input {
     all: unset;
+    background: #d3ecd0;
+    font-size: 1.3rem;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    font-weight: 800;
+    filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
+    font-family: var(--primaryFont); 
+    padding-left:1rem;
+}
+
+button{
+    all: unset;
+    font-family: var(--primaryFont); 
+}
+
+select{    
+    font-family: var(--primaryFont); 
+    color:var(--primaryColor);
+    background: #d3ecd0;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    border: none;
+}
+
+h1{
+    color:#fff;
+    filter: drop-shadow(0 0 0.75rem var(--primaryColor));
+    font-size: 3rem;
 }

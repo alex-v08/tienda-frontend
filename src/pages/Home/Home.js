@@ -1,10 +1,13 @@
 import './styles/home.css';
 import slider from "../../assets/slider.jpg"
 import video from "../../assets/video.mp4"
-import { productos } from '../../assets/Mock/productos';
 import { Cards } from '../../components';
+import { getProductos } from './services/home.services';
 
-export const Home = () => {
+export const Home = async () => {
+
+    let productos = await getProductos();
+
     return `<div class='home'>
                 <section class="slider">                    
                     <video src=${video} autoplay poster=${slider} loop muted>
@@ -12,6 +15,7 @@ export const Home = () => {
                     </video>
                 </section>  
                 <section class="productos">
+                    <h1>Mas vendidos</h1>
                     ${Cards(productos)}
                 </section>  
             </div>`;     

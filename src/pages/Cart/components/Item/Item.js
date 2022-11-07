@@ -10,6 +10,7 @@ export const Item = (item) => {
                 <div class="tools">
                     <input type="number" value="${item.Cantidad}" />
                     <strong>$ ${item.Precio}</strong>
-                </div>                
+                </div>    
+                <button class="close"> x </button>           
             </div>`;     
 } 
