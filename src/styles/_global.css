@@ -5,7 +5,7 @@
     --backgroundColor:#fff;
     --primaryFont:  'Victor Mono', sans-serif;    
     --headerHeight: 10rem;
-    --navHeight: 4rem;
+    --navHeight: 5rem;
     --footerHeight: 6rem;
     --asideWidth: 200px;
 }
@@ -64,4 +64,8 @@ a{
     text-decoration: none;
     font-family: 'Victor Mono';
     color:inherit;
+}
+
+a.active{
+    color:var(--terciaryColor)!important; 
 }
