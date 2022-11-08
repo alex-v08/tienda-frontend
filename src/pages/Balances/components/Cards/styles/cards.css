@@ -1,0 +1,22 @@
+.balance-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    background: var(--primaryColor);
+    width: 20rem;
+    height: 10rem;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 1rem;
+    filter: drop-shadow(0 0 0.75rem var(--primaryColor));
+  }
+
+  @media screen and (max-width: 600px) {
+  
+    .balances .balance-card {
+      width: 100%;
+    }
+  }
+  
