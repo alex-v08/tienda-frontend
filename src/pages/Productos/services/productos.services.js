@@ -1,4 +1,4 @@
-import { productos } from "../../../assets/Mock/productos";
+import { productos } from "../../../Mock/productos";
 
 export const getProductos = async () => {    
     return productos;

@@ -15,7 +15,7 @@ export const Home = async () => {
                     </video>
                 </section>  
                 <section class="productos">
-                    <h1>Mas vendidos</h1>
+                    <h1>Más vendidos</h1>
                     ${Cards(productos)}
                 </section>  
             </div>`;     

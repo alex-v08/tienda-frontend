@@ -7,6 +7,7 @@ import {
   Producto,
   Cart,
   Productos,
+  Balances,
 } from "../pages";
 
 export const routes = [
@@ -33,6 +34,10 @@ export const routes = [
   {
     path: "/productos",
     page: () => AuthLayout(Productos),
+  },
+  {
+    path: "/balances",
+    page: () => AuthLayout(Balances),
   },
 ];
 

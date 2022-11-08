@@ -1,5 +1,7 @@
 import './styles/userProfile.css';
 import cart from "../../assets/cart.svg"
+import avatar from "../../../public/random.svg"
+
 
 
 export const UserProfile = () => {
@@ -8,7 +10,7 @@ export const UserProfile = () => {
                     <span> Leonardo Duca </span>
                     <span>Administrador</span>
                 </div>
-                <img src="https://joeschmoe.io/api/v1/random" alt="userPick" title="userPick"/>	
+                <img src="${avatar}" alt="userPick" title="userPick"/>	
                 <a href="/cart">
                     <img class="cart" src="${cart}" />
                 </a>

@@ -1,4 +1,4 @@
-import { carrito } from "../../../assets/Mock/carrito";
+import { carrito } from "../../../Mock/carrito";
 
 export const getProductos = async () => {
     

@@ -12,6 +12,7 @@
 }
 
 #cart .total {
+  margin-top: 5.5rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +31,7 @@
 
 .total h1,
 .total button {
-  background-color: var(--terciaryColor);
+  background-color: #01c38d5e;
   filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
   padding: 1rem;
   text-align: center;
@@ -40,8 +41,8 @@
 }
 
 .total h1 {
-  font-size: 4rem;
-  border-radius: 2rem 2rem 0 0;
+  font-size: 3rem;
+  border-radius: 1rem 1rem 0 0;
 }
 
 .total strong {

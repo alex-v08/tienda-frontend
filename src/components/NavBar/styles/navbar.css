@@ -9,10 +9,8 @@
 .navbar a{
     color:#fff;
     text-decoration: none;
-    font-family: 'Victor Mono';
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
-
 }
 
 .navbar a:hover{    
