@@ -1,24 +1,23 @@
-import { getProducto } from './services/productoServices';
-import './styles/producto.css';
-import cart from "../../assets/cartgreen.svg"
-import { getProductos } from '../Cart/services/cart.services';
 import { Cards } from '../../components';
+import { getRandom, getById } from '../../services/productos';
 
+import cart from "../../assets/cartgreen.svg"
+import './styles/producto.css';
 
 export const Producto = async (params) => {
-    let producto = await getProducto(params.id);    
-    let productos = await getProductos();
+    let producto = await getById(params.id);    
+    let productos = await getRandom();    
 
     let view = `<div id='producto'>
                      <article>                        
                         <figure>
-                            <img src="${producto.Image}" title="${producto.Nombre}" />  
+                            <img src="${producto.image}" title="${producto.nombre}" />  
                         </figure>
-                       <h2> ${producto.Nombre} </h2>
-                       <p> ${producto.Descripcion} </p>
-                       <div class="precio">$${producto.Precio}</div>
+                       <h2> ${producto.nombre} </h2>
+                       <p> ${producto.descripcion} </p>
+                       <div class="precio">$${producto.precio}</div>
                        <footer>
-                            <div class="marca">${producto.Marca}</div>
+                            <div class="marca">${producto.marca}</div>
                             <div class="cart">
                                 <span>+</span>
                                 <img src="${cart}" title="add to carrito" />

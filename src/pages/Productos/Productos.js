@@ -1,10 +1,10 @@
 import { Cards } from '../../components';
-import { getProductos } from './services/productos.services';
+import { getAll } from '../../services/productos';
 import './styles/productos.css';
 
 export const Productos = async () => {
     
-    let productos = await getProductos();
+    let productos = await getAll();
 
     return `<div class='productos'>
                 <section class="header">

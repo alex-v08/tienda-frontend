@@ -13,7 +13,7 @@ import {
 export const routes = [
   {
     path: "/",
-    page: () => AuthLayout(Home),
+    page: () => AuthLayout(async () => await Home()),
   },
   {
     path: "/login",

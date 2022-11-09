@@ -20,8 +20,9 @@
     object-fit: cover;    
 }
 
-.home .productos{
+.home .topProductos{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 3rem;

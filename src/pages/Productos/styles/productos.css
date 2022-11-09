@@ -8,7 +8,7 @@
     display: flex;           
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3rem;  
+    padding: 2rem;  
 }
 
 .productos .tools{  
@@ -20,11 +20,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;    
-    max-width: 300px;
+    max-width: 30rem;
     border-radius: 1rem;
     color:#fff;
-    font-size: 2rem;
-    padding-right: 1rem;    
+    font-size: 2rem;    
 }
 
 .tools .filter span{

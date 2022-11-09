@@ -3,13 +3,13 @@ import "./styles/card.css";
 export const Card = (card) => {
   return `<div class="card">        
             <figure>
-                <a href="/producto/${card.id}" >
-                    <img src="${card.Image}" title="${card.Nombre}" />
+                <a href="/producto/${card.productoId}" >
+                    <img src="${card.image}" title="${card.nombre}" />
                 </a>
             </figure>  
             <footer>
-                <h2> ${card.Nombre} </h2>
-                <strong>$ ${card.Precio}</strong>
+                <h2> ${card.nombre} </h2>
+                <strong>$ ${card.precio}</strong>
             </footer>           
 		  </div>`;
 };
