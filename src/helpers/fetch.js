@@ -2,10 +2,11 @@
 const VITE_API_BASE_URL = "https://localhost:7133/api";
 
 export const fetchWithoutToken = async (endpoint, method, request) => {
+  console.log("request", request);
     
   const response = await fetch(`${VITE_API_BASE_URL}/${endpoint}`, {
     method: method,
-    body: request,
+    body: JSON.stringify(request),
     headers: {
       "Content-Type": "application/json",
     },

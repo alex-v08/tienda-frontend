@@ -1,7 +1,10 @@
 import { Cards } from '../../components';
 import { getRandom, getById } from '../../services/productos';
+import { addProduct } from '../../services/carrito';
+
 import cart from "../../assets/cartgreen.svg"
 import './styles/producto.css';
+
 
 export const Producto = async (params) => {
     let producto = await getById(params.id);    
@@ -33,7 +36,7 @@ export const Producto = async (params) => {
         divElement.innerHTML = view;
 
         const btn = divElement.querySelector("#btnAddToCart");
-        btn.addEventListener("click", () => alert('sopa'));
+        btn.addEventListener("click", () => addProduct(params.id, 1));
 
     return divElement;     
 } 
