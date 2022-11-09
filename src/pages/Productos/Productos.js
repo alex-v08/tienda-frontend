@@ -6,8 +6,7 @@ export const Productos = async () => {
     
     let productos = await getAll();
 
-    return `<div class='productos'>
-                <section class="header">
+    let view = `<section class="header">
                     <h1> Productos </h1>  
                     <div class="tools">    
                         <select name="order">
@@ -23,5 +22,11 @@ export const Productos = async () => {
                 <section class="productos">
                     ${Cards(productos)}
                 </section>    
-             </div>`;     
+             `;
+             
+    const divElement = document.createElement("div");
+    divElement.classList = "productos";
+    divElement.innerHTML = view;
+    
+    return divElement;
 } 

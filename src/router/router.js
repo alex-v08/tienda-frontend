@@ -18,7 +18,7 @@ const router = async () => {
     };
 
     var params = getParams(match);  
-    document.getElementById("app").innerHTML = await match.route.page(params);
+    document.getElementById("app").appendChild(await match.route.page(params));
 };
 
 window.addEventListener("popstate", router);

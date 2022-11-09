@@ -4,6 +4,9 @@ const activateLink = () => {
   const activePage = window.location.pathname;
   const navLinks = document.querySelectorAll("nav a");
 
+  const btn = document.querySelector(".slider");
+  console.log("btn", btn);
+
   if (activePage !== "/") {
     navLinks.forEach((link) => {
       if (link.href.includes(`${activePage}`)) {
@@ -13,7 +16,7 @@ const activateLink = () => {
   }
   if (activePage === "/") 
     navLinks[0].classList.add("active");
-
 };
 
 window.addEventListener("DOMContentLoaded", activateLink);
+

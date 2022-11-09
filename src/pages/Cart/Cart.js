@@ -7,8 +7,7 @@ export const Cart = async() => {
 
     let productos = await getProductos();
 
-    return `<div id='cart'>
-                <section class="items">
+    let view = `<section class="items">
                     <h1>Carrito de compras </h1>
                     ${productos.map((producto) => Item(producto)).join(" ")}    
                 </section>
@@ -17,5 +16,11 @@ export const Cart = async() => {
                     <strong>$ 480</strong>
                     <button> C0MPRAR </button>                    
                 </section>            
-            </div>`;     
+            `;   
+                      
+    const divElement = document.createElement("div");
+    divElement.id = "cart";
+    divElement.innerHTML = view;
+
+    return divElement;
 } 
