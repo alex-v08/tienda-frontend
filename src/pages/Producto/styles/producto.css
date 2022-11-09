@@ -28,6 +28,10 @@
     object-fit: cover;
 }
 
+#producto .flyer{
+    object-position: 0 0;
+}
+
 #producto article h2{
     color:#fff;
     font-family: 'Victor Mono';
@@ -91,7 +95,7 @@
 section.otros {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
 }
 
