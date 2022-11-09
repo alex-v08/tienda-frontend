@@ -1,10 +1,14 @@
 import './styles/NotFound.css';
 
 export const NotFound = () => {
-	return `<div class='notfound'>
-				<h1>4💀4</h1>	
-				<a href="/"> <~~ </a>
-			</div>`;
+	let view = `<h1>4💀4</h1>	
+				<a href="/"> <~~ </a>`;
+	
+	const divElement = document.createElement("div");
+	divElement.classList = "notfound";
+	divElement.innerHTML = view;
+
+	return divElement;
 };
 
 

@@ -1,10 +1,15 @@
 import './styles/unauthorized.css';
 
 export const Unauthorized = () => {
-	return `<div class='unauthorized'>
-				<h1>4💀1</h1>	
+	let view = `<h1>4💀1</h1>	
 				<a href="/"> <~~ </a>
-			</div>`;
+				`;
+
+	const divElement = document.createElement("div");
+	divElement.classList = "unauthorized";
+	divElement.innerHTML = view;
+
+	return divElement;
 };
 
 
