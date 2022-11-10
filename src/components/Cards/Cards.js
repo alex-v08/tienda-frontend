@@ -1,7 +1,9 @@
-import { Card } from "../Card/Card";
-import "./styles/cards.css";
+import { Card } from '../Card/Card';
+import { Empty } from '../Empty/Empty';
+import './styles/cards.css';
 
 export const Cards = (cards) => {
-    console.log(cards)
-  return `<div id="cards">${(cards.map(card => Card(card))).join(" ")}</div>`; 
+	if (!cards || cards.length === 0) return Empty();
+
+	return `<div id="cards">${cards.map((card) => Card(card)).join(' ')}</div>`;
 };

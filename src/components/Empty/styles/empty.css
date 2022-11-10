@@ -1,0 +1,22 @@
+.empty {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	padding: 2rem;
+}
+
+.empty img {
+	width: 5rem;
+	filter: drop-shadow(0 0 0.75rem var(--secundaryColor));
+}
+
+.empty h3 {
+	font-size: 2rem;
+	font-family: 'Victor Mono';
+	filter: drop-shadow(0 0 0.75rem var(--secundaryColor));
+	text-align: center;
+	color: #fff;
+}

@@ -1,6 +1,10 @@
-import { getWithoutToken } from "../../helpers/fetch";
+import { getWithoutToken } from '../../helpers/fetch';
 
 export const getAll = async () => {
-    const data = await getWithoutToken("productos");
-    return data;
-}
+	try {
+		const data = await getWithoutToken('productos');
+		return data;
+	} catch (error) {
+		console.error('error', error);
+	}
+};
