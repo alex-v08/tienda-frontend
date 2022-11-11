@@ -1,4 +1,4 @@
-import { deleteProduct } from '../../../../services/carrito';
+import { deleteProduct, updateProduct } from '../../../../services/carrito';
 import './styles/item.css';
 
 export const Item = (item) => {
@@ -9,7 +9,7 @@ export const Item = (item) => {
                     <p class="overflow-ellipsis"> ${item.descripcion} </p>  
                 </div>
                 <div class="tools">
-                    <input type="number" value="${item.cantidad}" />
+                    <input type="number" value="${item.cantidad}" id="inpAmount" />
                     <strong>$ ${item.precio}</strong>
                 </div>    
                 <button id="btnClose" class="close"> x </button>           
@@ -22,6 +22,12 @@ export const Item = (item) => {
 	const btnClose = divElement.querySelector('#btnClose');
 	btnClose.addEventListener('click', () => {
 		deleteProduct(1, item.productoId);
+		window.location.href = '/cart';
+	});
+
+	const inpAmount = divElement.querySelector('#inpAmount');
+	inpAmount.addEventListener('change', (event) => {
+		updateProduct(1, item.productoId, +event.target.value);
 		window.location.href = '/cart';
 	});
 

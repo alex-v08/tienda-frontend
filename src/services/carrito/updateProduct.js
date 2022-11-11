@@ -1,8 +1,8 @@
 import { fetchWithoutToken } from '../../helpers/fetch';
 
-export const updateProduct = async (productId, amount) => {
+export const updateProduct = async (clientId, productId, amount) => {
 	const data = await fetchWithoutToken('carrito', 'PUT', {
-		clientId: 1,
+		clientId: clientId,
 		productId: +productId,
 		amount: amount,
 	});
