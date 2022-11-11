@@ -1,1 +1,2 @@
-export * from './generateOrden';
+export * from './generateOrder';
+export * from './reportByDay';
