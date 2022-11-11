@@ -1,15 +1,18 @@
 // const VITE_API_BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const VITE_API_BASE_URL = 'https://localhost:7133/api';
 
-export const fetchWithoutToken = async (endpoint, method, request) => {
+export const fetchWithoutToken = async (endpoint, method, request = null) => {
 	try {
-		const response = await fetch(`${VITE_API_BASE_URL}/${endpoint}`, {
+		let init = {
 			method: method,
-			body: JSON.stringify(request),
 			headers: {
 				'Content-Type': 'application/json',
 			},
-		});
+		};
+
+		if (!!request) init.body = JSON.stringify(request);
+
+		const response = await fetch(`${VITE_API_BASE_URL}/${endpoint}`, init);
 
 		if (!response.ok) {
 			throw new Error(`HTTP error! status: ${response.status}`);

@@ -3,6 +3,7 @@ import { Item } from './components/Item/Item';
 
 import { getProductByCart } from '../../services/carrito';
 import './styles/cart.css';
+import { generateOrder } from '../../services/orden/generateOrder';
 
 export const Cart = async () => {
 	let carrito = await getProductByCart(1);
@@ -13,7 +14,7 @@ export const Cart = async () => {
                 <section class="total">
                     <h1 class="title"> T0TAL </h1>               
                     <strong>${!!carrito ? carrito.total : 0}</strong>
-                    <button> C0MPRAR </button>                    
+                    <button id="btnComprar"> C0MPRAR </button>                    
                 </section>            
             `;
 
@@ -29,6 +30,14 @@ export const Cart = async () => {
 			itemsElements.appendChild(Item(element));
 		});
 	}
+
+	const btnComprar = divElement.querySelector('#btnComprar');
+	btnComprar.addEventListener('click', () => {
+		let data = generateOrder(1);
+		alert(data.total);
+
+		// window.location.href = '/cart';
+	});
 
 	return divElement;
 };
