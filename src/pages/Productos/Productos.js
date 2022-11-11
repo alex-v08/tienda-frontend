@@ -1,17 +1,16 @@
 import { Cards } from '../../components';
-import { getAll } from '../../services/productos';
+import { getAll, getByFilter } from '../../services/productos';
 import './styles/productos.css';
 
 export const Productos = async () => {
-    
-    let productos = await getAll();
+	let productos = await getAll();
 
-    let view = `<section class="header">
+	let view = `<section class="header">
                     <h1> Productos </h1>  
                     <div class="tools">    
-                        <select name="order">
-                            <option value="1">Ordenar por nombre</option>   
-                            <option value="2">Ordenar por precio</option>       
+                        <select name="order" id="slOrder">
+                            <option value="false">Más caros</option>   
+                            <option value="true">Más baratos</option>       
                         </select>                    
                         <div class="filter"> 
                             <input type="text" placeholder="buscar..."/>                    
@@ -19,14 +18,24 @@ export const Productos = async () => {
                         </div>                   
                     </div>  
                 </section>
-                <section class="productos">
-                    ${Cards(productos)}
+                <section class="productos" id="productos">                    
                 </section>    
              `;
-             
-    const divElement = document.createElement("div");
-    divElement.classList = "productos";
-    divElement.innerHTML = view;
-    
-    return divElement;
-} 
+
+	const divElement = document.createElement('div');
+	divElement.classList = 'productos';
+	divElement.innerHTML = view;
+
+	const divProductos = divElement.querySelector('#productos');
+	divProductos.appendChild(Cards(productos));
+
+	const slOrder = divElement.querySelector('#slOrder');
+	slOrder.addEventListener('change', async (event) => {
+		let productosFiltrados = await getByFilter('', event.target.value);
+
+		const divProductos = divElement.querySelector('#productos');
+		divProductos.replaceChildren(Cards(productosFiltrados));
+	});
+
+	return divElement;
+};

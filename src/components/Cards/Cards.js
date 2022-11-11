@@ -3,7 +3,14 @@ import { Empty } from '../Empty/Empty';
 import './styles/cards.css';
 
 export const Cards = (cards) => {
-	if (!cards || cards.length === 0) return Empty();
+	let view = Empty();
 
-	return `<div id="cards">${cards.map((card) => Card(card)).join(' ')}</div>`;
+	if (!!cards && cards.length > 0)
+		view = cards.map((card) => Card(card)).join(' ');
+
+	const divElement = document.createElement('div');
+	divElement.id = 'cards';
+	divElement.innerHTML = view;
+
+	return divElement;
 };

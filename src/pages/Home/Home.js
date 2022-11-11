@@ -11,15 +11,17 @@ export const Home = async () => {
                         Tu navegador no admite el elemento <code>video</code>.
                     </video>
                 </section>  
-                <section class="topProductos">
-                    <h1>Más vendidos</h1>
-                    ${Cards(productos)}
+                <section class="topProductos" id="topProductos">
+                    <h1>Más vendidos</h1>                    
                 </section>  
             `;
 
 	const divElement = document.createElement('div');
 	divElement.classList = 'home';
 	divElement.innerHTML = view;
+
+	const divProductos = divElement.querySelector('#topProductos');
+	divProductos.appendChild(Cards(productos));
 
 	return divElement;
 };

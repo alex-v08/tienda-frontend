@@ -32,11 +32,10 @@ export const Cart = async () => {
 	}
 
 	const btnComprar = divElement.querySelector('#btnComprar');
-	btnComprar.addEventListener('click', () => {
-		let data = generateOrder(1);
-		alert(data.total);
-
-		// window.location.href = '/cart';
+	btnComprar.addEventListener('click', async () => {
+		let data = await generateOrder(1);
+		alert('Gracias por su compra!' + data.ordenId);
+		window.location.href = '/cart';
 	});
 
 	return divElement;
