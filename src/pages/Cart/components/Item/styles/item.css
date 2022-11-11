@@ -1,76 +1,77 @@
-.item{
-    display: flex;
-    gap:2rem;    
-    width: 100%;
-    background: var(--primaryColor);
-    border-radius: 1rem;   
-    filter: drop-shadow(0 0 0.75rem var(--primaryColor));    
-    align-items: center;
-    padding-right: 3rem;
-    position: relative;
+.item {
+	display: flex;
+	gap: 2rem;
+	width: 100%;
+	background: var(--primaryColor);
+	border-radius: 1rem;
+	filter: drop-shadow(0 0 0.75rem var(--primaryColor));
+	align-items: center;
+	padding-right: 3rem;
+	position: relative;
 }
 
-.item img{
-    width: 200px;
-    border-radius: 1rem 0 0 1rem;    
+.item img {
+	width: 200px;
+	height: 120px;
+	object-fit: cover;
+	border-radius: 1rem 0 0 1rem;
 }
 
-.item .info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   
-    gap:1rem;
-    padding: 1rem;
-    background: var(--primaryColor);
-    color:#fff;
-    font-family: 'Victor Mono';    
-    border-radius: 0 1rem 1rem 0; 
+.item .info {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	gap: 1rem;
+	padding: 1rem;
+	background: var(--primaryColor);
+	color: #fff;
+	font-family: 'Victor Mono';
+	border-radius: 0 1rem 1rem 0;
 }
 
-.item  p{
-    max-width: 200px;
-    white-space: nowrap;
-    overflow: hidden;
-    font-size: 1.2rem;
+.item p {
+	max-width: 200px;
+	white-space: nowrap;
+	overflow: hidden;
+	font-size: 1.2rem;
 }
 
-.item .tools{    
-    display: flex;
-    align-items: center;
-    margin-left: auto;
-    min-width: 150px;
-    gap:2rem;
+.item .tools {
+	display: flex;
+	align-items: center;
+	margin-left: auto;
+	min-width: 150px;
+	gap: 2rem;
 }
 
+.tools input {
+	width: 50px;
+	height: 30px;
+}
 
- .tools input {    
-    width: 50px;
-    height: 30px;
-  }
+.tools strong {
+	color: #fff;
+	font-size: 2rem;
+}
 
-  .tools strong{
-    color:#fff;
-    font-size: 2rem;
-  }
+.item .close {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-size: 2rem;
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	cursor: pointer;
+	background: var(--primaryColor);
+	width: 3rem;
+	height: 3rem;
+	border-radius: 50%;
+	padding: 2px 2px 4px 2px;
+}
 
-  .item .close{    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color:#fff;
-    font-size: 2rem;
-    position: absolute;
-    right: 1rem;
-    top:1rem;
-    cursor: pointer;
-    background: var(--primaryColor);
-    width: 3rem;
-    height: 3rem;    
-    border-radius: 50%;
-    padding: 2px 2px 4px 2px;
-  }
-
-  .item .close:hover{  
-    transform: scale(1.1);
-  }
+.item .close:hover {
+	transform: scale(1.1);
+}

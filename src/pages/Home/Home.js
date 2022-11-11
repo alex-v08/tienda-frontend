@@ -3,7 +3,6 @@ import slider from '../../assets/slider.jpg';
 import video from '../../assets/video.mp4';
 import { Cards } from '../../components';
 import { getRandom } from '../../services/productos/getRandom';
-import { ErrorPage } from '../Error/ErrorPage';
 
 export const Home = async () => {
 	const productos = await getRandom();

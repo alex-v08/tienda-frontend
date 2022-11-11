@@ -1,16 +1,29 @@
+import { deleteProduct } from '../../../../services/carrito';
 import './styles/item.css';
 
 export const Item = (item) => {
-    return `<div class='item'>
-                <img src="${item.Image}" title="${item.Nombre}" />
+	let view = `<div class='item'>
+                <img src="${item.image}" title="${item.nombre}" />
                 <div class="info">
-                    <h2> ${item.Nombre} </h2> 
-                    <p class="overflow-ellipsis"> ${item.Descripcion} </p>  
+                    <h2> ${item.nombre} </h2> 
+                    <p class="overflow-ellipsis"> ${item.descripcion} </p>  
                 </div>
                 <div class="tools">
-                    <input type="number" value="${item.Cantidad}" />
-                    <strong>$ ${item.Precio}</strong>
+                    <input type="number" value="${item.cantidad}" />
+                    <strong>$ ${item.precio}</strong>
                 </div>    
-                <button class="close"> x </button>           
-            </div>`;     
-} 
+                <button id="btnClose" class="close"> x </button>           
+            </div>`;
+
+	const divElement = document.createElement('div');
+	divElement.classList = 'home';
+	divElement.innerHTML = view;
+
+	const btnClose = divElement.querySelector('#btnClose');
+	btnClose.addEventListener('click', () => {
+		deleteProduct(1, item.productoId);
+		window.location.href = '/cart';
+	});
+
+	return divElement;
+};
