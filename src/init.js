@@ -1,22 +1,17 @@
-import "victormono";
+import 'victormono';
 
 const activateLink = () => {
-  const activePage = window.location.pathname;
-  const navLinks = document.querySelectorAll("nav a");
+	const activePage = window.location.pathname;
+	const navLinks = document.querySelectorAll('nav a');
 
-  const btn = document.querySelector(".slider");
-  console.log("btn", btn);
-
-  if (activePage !== "/") {
-    navLinks.forEach((link) => {
-      if (link.href.includes(`${activePage}`)) {
-        link.classList.add("active");
-      }
-    });
-  }
-  if (activePage === "/") 
-    navLinks[0].classList.add("active");
+	if (activePage !== '/') {
+		navLinks.forEach((link) => {
+			if (link.href.includes(`${activePage}`)) {
+				link.classList.add('active');
+			}
+		});
+	}
+	if (activePage === '/') navLinks[0].classList.add('active');
 };
 
-window.addEventListener("DOMContentLoaded", activateLink);
-
+window.addEventListener('DOMContentLoaded', activateLink);
