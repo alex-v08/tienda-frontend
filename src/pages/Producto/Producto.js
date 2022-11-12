@@ -11,9 +11,7 @@ export const Producto = async (params) => {
 
 	let view = `<article>                        
                     <figure>
-                        <img class="flyer" src="${producto.image}" title="${
-		producto.nombre
-	}" />  
+                        <img class="flyer" src="${producto.image}" title="${producto.nombre}" />  
                     </figure>
                     <h2> ${producto.nombre} </h2>
                     <p> ${producto.descripcion} </p>
@@ -26,14 +24,16 @@ export const Producto = async (params) => {
                         </button>
                     </footer>                       
                 </article>
-                <section class="otros">                        
-                    ${Cards(productos)}
+                <section class="otros" id="otros">                        
                 </section>
               `;
 
 	const divElement = document.createElement('div');
 	divElement.id = 'producto';
 	divElement.innerHTML = view;
+
+	const divProductos = divElement.querySelector('#otros');
+	divProductos.appendChild(Cards(productos));
 
 	const btn = divElement.querySelector('#btnAddToCart');
 	btn.addEventListener('click', () => addProduct(params.id, 1));

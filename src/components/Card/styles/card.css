@@ -1,40 +1,40 @@
-.card{
-    background-color: var(--primaryColor);
-    border-radius: 2rem;
-    padding: 1rem;
-    filter: drop-shadow(0 0 0.75rem var(--primaryColor));
-    padding: 0;
-    cursor: pointer;
+.card {
+	background-color: var(--primaryColor);
+	border-radius: 2rem;
+	padding: 1rem;
+	filter: drop-shadow(0 0 0.75rem var(--primaryColor));
+	padding: 0;
+	cursor: pointer;
 }
 
-.card footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color:#fff;
-    font-family: 'Victor Mono';
-    width: 100%;
-    padding: 2rem;
+.card footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #fff;
+	font-family: 'Victor Mono';
+	width: 100%;
+	padding: 2rem;
 }
 
-.card footer strong{ 
-    font-size: 1.5rem;
+.card footer strong {
+	font-size: 1.5rem;
 }
 
-.card figure{
-    overflow: hidden;
-    width: 100%;
-    height: 200px;
+.card figure {
+	overflow: hidden;
+	width: 100%;
+	height: 200px;
 }
 
-.card:hover{   
-    transform: scale(1.05);
-    transition-duration: 0.5s;
+.card:hover {
+	transform: scale(1.05);
+	transition-duration: 0.5s;
 }
 
-.card figure img{  
-    border-radius: 2rem 2rem 0 0;
-    width: 100%;
-    height: 200px;
-    object-fit: cover;    
+.card figure img {
+	border-radius: 2rem 2rem 0 0;
+	width: 100%;
+	height: 200px;
+	object-fit: cover;
 }
