@@ -9,10 +9,9 @@ export const Producto = async (params) => {
 	let producto = await getById(params.id);
 	let productos = await getRandom();
 
-	let view = `
-                    <article>                                             
+	let view = `<article>                                             
                     <figure>
-                        <img class="flyer" src="${producto.image}" title="${producto.nombre}" />  
+                        <img class="flyer" src="${producto.image}" title="${producto.nombre}" alt="producto"/>  
                     </figure>
                     <h2> ${producto.nombre} </h2>
                     <p> ${producto.descripcion} </p>
@@ -21,7 +20,7 @@ export const Producto = async (params) => {
                         <div class="marca">${producto.marca}</div>
                         <button id="btnAddToCart" class="cart">
                             <span>+</span>
-                            <img src="${cart}" title="add to carrito" />
+                            <img src="${cart}" title="add to cart" all="add to cart"/>
                         </button>
                     </footer>                       
                 </article>

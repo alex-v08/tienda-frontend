@@ -1,10 +1,10 @@
-import "./styles/card.css";
+import './styles/card.css';
 
 export const Card = (card) => {
-  return `<div class="card">        
+	return `<div class="card">        
             <figure>
                 <a href="/producto/${card.productoId}" >
-                    <img src="${card.image}" title="${card.nombre}" />
+                    <img src="${card.image}" title="${card.nombre}" alt="${card.nombre}" />
                 </a>
             </figure>  
             <footer>

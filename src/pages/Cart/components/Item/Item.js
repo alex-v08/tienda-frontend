@@ -4,7 +4,7 @@ import './styles/item.css';
 
 export const Item = (item) => {
 	let view = `<div class='item'>
-                <img src="${item.image}" title="${item.nombre}" />
+                <img src="${item.image}" title="${item.nombre}" alt="producto"/>
                 <div class="info">
                     <h2> ${item.nombre} </h2> 
                     <p class="overflow-ellipsis"> ${item.descripcion} </p>  
