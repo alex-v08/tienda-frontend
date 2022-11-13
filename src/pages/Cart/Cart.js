@@ -24,7 +24,7 @@ export const Cart = async () => {
 	divElement.innerHTML = view;
 
 	const itemsElements = divElement.querySelector('#items');
-	if (!carrito || carrito.productos === 0) {
+	if (!carrito || carrito.productos.length === 0) {
 		itemsElements.innerHTML = Empty();
 	} else {
 		carrito.productos.forEach((element) => {
