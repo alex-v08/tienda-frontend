@@ -9,7 +9,8 @@ export const Producto = async (params) => {
 	let producto = await getById(params.id);
 	let productos = await getRandom();
 
-	let view = `<article>                        
+	let view = `
+                    <article>                                             
                     <figure>
                         <img class="flyer" src="${producto.image}" title="${producto.nombre}" />  
                     </figure>

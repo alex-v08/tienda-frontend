@@ -72,3 +72,24 @@ a {
 a.active {
 	color: var(--terciaryColor) !important;
 }
+
+/* Modifico scroll*/
+
+*::-webkit-scrollbar {
+	width: 8px;
+}
+
+/* Track */
+*::-webkit-scrollbar-track {
+	background: #e8e6f2;
+}
+
+/* Handle */
+*::-webkit-scrollbar-thumb {
+	background: var(--terciaryColor);
+}
+
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+	background: var(--secundaryColor);
+}

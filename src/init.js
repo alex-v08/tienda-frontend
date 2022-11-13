@@ -3,7 +3,6 @@ import 'victormono';
 const activateLink = () => {
 	const activePage = window.location.pathname;
 	const navLinks = document.querySelectorAll('nav a');
-	console.log('navLinks', navLinks);
 
 	if (activePage !== '/') {
 		navLinks.forEach((link) => {
