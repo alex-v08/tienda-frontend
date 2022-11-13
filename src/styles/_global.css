@@ -1,71 +1,74 @@
-:root{
-    --primaryColor:#191E29;
-    --secundaryColor:#132D46;
-    --terciaryColor:#01c38D;
-    --backgroundColor:#fff;
-    --primaryFont:  'Victor Mono', sans-serif;    
-    --headerHeight: 10rem;
-    --navHeight: 5rem;
-    --footerHeight: 6rem;
-    --asideWidth: 200px;
+:root {
+	--primaryColor: #191e29;
+	--secundaryColor: #132d46;
+	--terciaryColor: #01c38d;
+	--terciaryColor: #01c38d;
+	--errorColor: #cf6679;
+	--backgroundColor: #fff;
+	--primaryFont: 'Victor Mono', sans-serif;
+	--headerHeight: 10rem;
+	--navHeight: 5rem;
+	--footerHeight: 6rem;
+	--asideWidth: 200px;
 }
 
-html{
-    box-sizing: border-box; 
-    font-size: 62.5%; /* hack 1rem = 10px */
-    font-family: var(--primaryFont); 
+html {
+	box-sizing: border-box;
+	font-size: 62.5%; /* hack 1rem = 10px */
+	font-family: var(--primaryFont);
 }
 
-*, *:before, *:after{
-    box-sizing:inherit; 
-    margin: 0;
-    padding: 0;
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
 }
-
 
 .overflow-ellipsis {
-    text-overflow: ellipsis;
+	text-overflow: ellipsis;
 }
 
 input {
-    all: unset;
-    background: #d3ecd0;
-    font-size: 1.3rem;
-    padding: 0.5rem;
-    border-radius: 1rem;
-    font-weight: 800;
-    filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
-    font-family: var(--primaryFont); 
-    padding-left:1rem;
+	all: unset;
+	background: #d3ecd0;
+	font-size: 1.3rem;
+	padding: 0.5rem;
+	border-radius: 1rem;
+	font-weight: 800;
+	filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
+	font-family: var(--primaryFont);
+	padding-left: 1rem;
 }
 
-button{
-    all: unset;
-    font-family: var(--primaryFont); 
+button {
+	all: unset;
+	font-family: var(--primaryFont);
 }
 
-select{    
-    font-family: var(--primaryFont); 
-    color:var(--primaryColor);
-    background: #d3ecd0;
-    border-radius: 1rem;
-    padding: 0 1rem;
-    border: none;
+select {
+	font-family: var(--primaryFont);
+	color: var(--primaryColor);
+	background: #d3ecd0;
+	border-radius: 1rem;
+	padding: 0 1rem;
+	border: none;
 }
 
-h1{
-    font-family: var(--primaryFont); 
-    color:#fff;
-    filter: drop-shadow(0 0 0.75rem var(--primaryColor));
-    font-size: 2.5rem;
+h1 {
+	font-family: var(--primaryFont);
+	color: #fff;
+	filter: drop-shadow(0 0 0.75rem var(--primaryColor));
+	font-size: 2.5rem;
 }
 
-a{
-    text-decoration: none;
-    font-family: 'Victor Mono';
-    color:inherit;
+a {
+	text-decoration: none;
+	font-family: 'Victor Mono';
+	color: inherit;
 }
 
-a.active{
-    color:var(--terciaryColor)!important; 
+a.active {
+	color: var(--terciaryColor) !important;
 }

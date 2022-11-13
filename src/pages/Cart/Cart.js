@@ -1,4 +1,4 @@
-import { Empty } from '../../components';
+import { Empty, Message } from '../../components';
 import { Item } from './components/Item/Item';
 
 import { getProductByCart } from '../../services/carrito';
@@ -16,7 +16,7 @@ export const Cart = async () => {
                     <h1 class="title"> T0TAL </h1>               
                     <strong>${!!carrito ? carrito.total : 0}</strong>
                     <button id="btnComprar"> C0MPRAR </button>                    
-                </section>            
+                </section> 
             `;
 
 	const divElement = document.createElement('div');
@@ -34,9 +34,7 @@ export const Cart = async () => {
 
 	const btnComprar = divElement.querySelector('#btnComprar');
 	btnComprar.addEventListener('click', async () => {
-		let data = await generateOrder(user.id);
-		alert('Gracias por su compra!' + data.ordenId);
-		window.location.href = '/cart';
+		await generateOrder(user.id);
 	});
 
 	return divElement;

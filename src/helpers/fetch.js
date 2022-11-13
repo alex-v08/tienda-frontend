@@ -15,11 +15,19 @@ export const fetchWithoutToken = async (endpoint, method, request = null) => {
 		const response = await fetch(`${VITE_API_BASE_URL}/${endpoint}`, init);
 
 		if (!response.ok) {
-			throw new Error(`HTTP error! status: ${response.status}`);
+			const data = await response.json();
+
+			if (!!data.title && !!data.message)
+				throw new Error(`${data.title}, ${data.message}`);
+			else
+				throw new Error(
+					`Error no especificado, consulte al administrador.`
+				);
 		}
 		const data = await response.json();
 		return data;
 	} catch (error) {
+		console.log('EEOR', error);
 		throw new Error(error.message);
 	}
 };

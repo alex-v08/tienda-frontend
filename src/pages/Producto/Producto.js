@@ -1,4 +1,4 @@
-import { Cards } from '../../components';
+import { Cards, Message } from '../../components';
 import { getRandom, getById } from '../../services/productos';
 import { addProduct } from '../../services/carrito';
 
@@ -36,7 +36,9 @@ export const Producto = async (params) => {
 	divProductos.appendChild(Cards(productos));
 
 	const btn = divElement.querySelector('#btnAddToCart');
-	btn.addEventListener('click', () => addProduct(params.id, 1));
+	btn.addEventListener('click', async () => {
+		await addProduct(params.id, 1);
+	});
 
 	return divElement;
 };
