@@ -12,7 +12,7 @@ export const UserProfile = () => {
                 </div>
                 <img src="${avatar}" alt="userPick" title="userPick"/>	
                 <a href="/cart">
-                    <img class="cart" src="${cart}" />
+                    <img class="cart" src="${cart}" alt="carrito de compras" />
                 </a>
             </div>`;
 };

@@ -11,7 +11,7 @@ export const Producto = async (params) => {
 
 	let view = `<article>                                             
                     <figure>
-                        <img class="flyer" src="${producto.image}" title="${producto.nombre}" alt="producto"/>  
+                        <img class="flyer" src="${producto.image}" title="${producto.nombre}" alt="imagen de ${producto.nombre}"/>  
                     </figure>
                     <h2> ${producto.nombre} </h2>
                     <p> ${producto.descripcion} </p>
@@ -20,7 +20,7 @@ export const Producto = async (params) => {
                         <div class="marca">${producto.marca}</div>
                         <button id="btnAddToCart" class="cart">
                             <span>+</span>
-                            <img src="${cart}" title="add to cart" all="add to cart"/>
+                            <img src="${cart}" title="agregar al carrito" alt="agregar al carrito"/>
                         </button>
                     </footer>                       
                 </article>
