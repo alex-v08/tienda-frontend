@@ -1,3 +1,4 @@
+import { user } from '../../../../Mock/user';
 import { deleteProduct, updateProduct } from '../../../../services/carrito';
 import './styles/item.css';
 
@@ -21,13 +22,13 @@ export const Item = (item) => {
 
 	const btnClose = divElement.querySelector('#btnClose');
 	btnClose.addEventListener('click', () => {
-		deleteProduct(1, item.productoId);
+		deleteProduct(user.id, item.productoId);
 		window.location.href = '/cart';
 	});
 
 	const inpAmount = divElement.querySelector('#inpAmount');
 	inpAmount.addEventListener('change', (event) => {
-		updateProduct(1, item.productoId, +event.target.value);
+		updateProduct(user.id, item.productoId, +event.target.value);
 		window.location.href = '/cart';
 	});
 

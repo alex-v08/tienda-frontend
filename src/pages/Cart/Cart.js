@@ -4,9 +4,10 @@ import { Item } from './components/Item/Item';
 import { getProductByCart } from '../../services/carrito';
 import './styles/cart.css';
 import { generateOrder } from '../../services/orden/generateOrder';
+import { user } from '../../Mock/user';
 
 export const Cart = async () => {
-	let carrito = await getProductByCart(1);
+	let carrito = await getProductByCart(user.id);
 
 	let view = `<section class="items" id="items">
                     <h1>Carrito de compras</h1>                    
@@ -33,7 +34,7 @@ export const Cart = async () => {
 
 	const btnComprar = divElement.querySelector('#btnComprar');
 	btnComprar.addEventListener('click', async () => {
-		let data = await generateOrder(1);
+		let data = await generateOrder(user.id);
 		alert('Gracias por su compra!' + data.ordenId);
 		window.location.href = '/cart';
 	});
