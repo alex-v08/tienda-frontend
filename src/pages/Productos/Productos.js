@@ -1,4 +1,5 @@
 import { Cards } from '../../components';
+import { activateLink } from '../../init';
 import { getAll, getByFilter } from '../../services/productos';
 import './styles/productos.css';
 
