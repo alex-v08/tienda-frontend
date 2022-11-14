@@ -93,3 +93,12 @@ button.active {
 *::-webkit-scrollbar-thumb:hover {
 	background: var(--secundaryColor);
 }
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
