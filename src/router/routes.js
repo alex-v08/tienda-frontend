@@ -15,6 +15,10 @@ export const routes = [
 		page: () => AuthLayout(async () => await Home()),
 	},
 	{
+		path: '/inicio',
+		page: () => AuthLayout(async () => await Home()),
+	},
+	{
 		path: '/unauthorized',
 		page: () => PublicLayout(Unauthorized),
 	},

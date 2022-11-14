@@ -1,6 +1,6 @@
 import { routeNotFound, routes } from './routes';
 
-const router = async () => {
+export const router = async () => {
 	const potentialMatches = routes.map((route) => {
 		return {
 			route: route,
@@ -20,8 +20,13 @@ const router = async () => {
 			result: [location.pathname],
 		};
 
-	var params = getParams(match);
-	document.getElementById('app').appendChild(await match.route.page(params));
+	let params = getParams(match);
+	let app = document.getElementById('app');
+	if (app.children.length === 0) {
+		app.appendChild(await match.route.page(params));
+	} else {
+		app.replaceChildren(await match.route.page(params));
+	}
 
 	activateLink(location.pathname);
 };
