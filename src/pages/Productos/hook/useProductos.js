@@ -36,5 +36,13 @@ export const useProductos = async (view) => {
 			: divProductos.replaceChildren(Cards(productosFiltrados));
 	});
 
+	const btnInput = divElement.querySelector('#btnInput');
+	btnInput.addEventListener('keypress', function (event) {
+		if (event.key === 'Enter') {
+			event.preventDefault();
+			document.getElementById('btnSearch').click();
+		}
+	});
+
 	return divElement;
 };

@@ -9,7 +9,7 @@ export const Item = async (item) => {
                     <p class="overflow-ellipsis"> ${item.descripcion} </p>  
                 </div>
                 <div class="tools">
-                    <input type="number" value="${item.cantidad}" id="inpAmount" />
+                    <input type="number" value="${item.cantidad}" min="1" id="inpAmount" />
                     <strong>$ ${item.precio}</strong>
                 </div>    
                 <button id="btnClose" class="close"> x </button>           

@@ -15,7 +15,10 @@ export const useItem = async (view, item) => {
 
 	const inpAmount = divElement.querySelector('#inpAmount');
 	inpAmount.addEventListener('change', async (event) => {
-		await updateProduct(user.id, item.productoId, +event.target.value);
+		+event.target.value > 0
+			? await updateProduct(user.id, item.productoId, +event.target.value)
+			: await deleteProduct(user.id, item.productoId);
+
 		navigateTo('/cart');
 	});
 

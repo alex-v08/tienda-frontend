@@ -17,6 +17,7 @@ export const useCart = async (view) => {
 	const itemsElements = divElement.querySelector('#items');
 	if (!carrito || carrito.productos.length === 0) {
 		itemsElements.innerHTML = Empty();
+		divElement.querySelector('#btnComprar').disabled = true;
 	} else {
 		carrito.productos.forEach(async (element) => {
 			itemsElements.appendChild(await Item(element));

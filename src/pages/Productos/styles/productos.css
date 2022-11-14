@@ -79,7 +79,7 @@
 		border-radius: 0 0 0 1rem;
 	}
 
-	.tools .filter span {
+	.tools .filter button {
 		border-radius: 0 0 1rem 0;
 	}
 }

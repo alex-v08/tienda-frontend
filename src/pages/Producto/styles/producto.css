@@ -1,13 +1,14 @@
 #producto {
 	display: flex;
 	justify-content: center;
-	padding: 3rem;
+	padding: 4rem;
 	gap: 2rem;
 }
 
 #producto article {
 	display: flex;
 	max-width: 800px;
+	max-height: 700px;
 	flex-direction: column;
 	background-color: var(--primaryColor);
 	border-radius: 2rem;

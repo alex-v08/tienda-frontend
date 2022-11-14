@@ -1,55 +1,74 @@
-.authLayout{ 
-    background-image: linear-gradient(0deg, var(--terciaryColor) 5%, var(--primaryColor) 100%);
-    display: grid;
-    grid-template-areas:
-    'header header'
-    'nav nav'
-    'main main';
-    overflow-x: hidden;
-    font-family: 'Victor Mono';
+.authLayout {
+	background-image: linear-gradient(
+		0deg,
+		var(--terciaryColor) 5%,
+		var(--primaryColor) 100%
+	);
+	display: grid;
+	grid-template-areas:
+		'header header'
+		'nav nav'
+		'main main';
+	overflow-x: hidden;
+	font-family: 'Victor Mono';
 }
 
 .authLayout,
 .authLayout nav,
 .authLayout header,
-.authLayout main{
-    width: 100vw;    
+.authLayout main {
+	width: 100vw;
 }
 
-.authLayout nav{
-    grid-area: nav; 
-    background-color: #191e2987;    
-    height: var(--navHeight);
-    position: sticky;
-    top: 0;
-    z-index: 1;
+.authLayout nav {
+	grid-area: nav;
+	background-color: #191e2987;
+	height: var(--navHeight);
+	position: sticky;
+	top: 0;
+	z-index: 1;
 }
 
-.authLayout header{
-    grid-area: header;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding:0 4rem 0 4rem;    
-    height: var(--headerHeight);    
-    z-index: 1;
+.authLayout header {
+	grid-area: header;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 0 4rem 0 4rem;
+	height: var(--headerHeight);
+	z-index: 1;
 }
 
-.authLayout main{
-    grid-area: main; 
-    height: calc(100vh - var(--headerHeight) - var(--navHeight));
+.authLayout main {
+	grid-area: main;
+	height: calc(100vh - var(--headerHeight) - var(--navHeight));
 }
 
+#btnTop {
+	display: none;
+	position: absolute;
+	text-align: center;
+	bottom: 2rem;
+	right: 4rem;
+	background-color: var(--primaryColor);
+	width: 5rem;
+	height: 5rem;
+	border-radius: 1rem;
+	color: #fff;
+	filter: drop-shadow(0 0 0.75rem var(--terciaryColor));
+	cursor: pointer;
+	font-size: 2rem;
+}
 
 @media screen and (max-width: 780px) {
-    .authLayout{               
-        grid-template-areas:
-        'header header'
-        'nav nav'        
-        'main main';
-    }     
+	.authLayout {
+		grid-template-areas:
+			'header header'
+			'nav nav'
+			'main main';
+	}
 
-    .authLayout header{
-        filter: none;
-    } 
+	.authLayout header {
+		filter: none;
+	}
 }

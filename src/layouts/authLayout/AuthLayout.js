@@ -10,8 +10,9 @@ export const AuthLayout = async (children) => {
                     <nav class="navbar"> 
                         ${NavBar()} 
                     </nav>   
-                    <main id="children"> 
-                    </main>               
+                    <main id="children">                        
+                    </main>
+                    <button id="btnTop" title="ir arriba">↑</button>
     `;
 
 	return useAuthLayout(view, children);
