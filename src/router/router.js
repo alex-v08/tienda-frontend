@@ -1,4 +1,3 @@
-import { activateLink } from '../init';
 import { routeNotFound, routes } from './routes';
 
 const router = async () => {
@@ -59,4 +58,19 @@ const getParams = (match) => {
 			return [key, values[i]];
 		})
 	);
+};
+
+export const activateLink = (activePage) => {
+	const navLinks = document.querySelectorAll('.navbar a');
+	if (navLinks.length > 0) {
+		if (activePage !== '/') {
+			navLinks.forEach((link) => {
+				if (link.href.includes(`${activePage}`)) {
+					link.classList.add('active');
+				}
+			});
+		}
+
+		if (activePage === '/') navLinks[0].classList.add('active');
+	}
 };
