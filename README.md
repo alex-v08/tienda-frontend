@@ -1,5 +1,16 @@
 # tienda-frontend
 
+## General Info
+
+Trabajo final individual - Proyecto Software - Tienda de videojuegos
+
+## Technologies
+
+Vanilla JavaScript (NO framework)
+CSS (NO framework)
+HTML
+VITE
+
 ## Ejecución local.
 
 0. Ejecutar el backend.
