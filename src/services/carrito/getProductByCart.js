@@ -5,6 +5,6 @@ export const getProductByCart = async (clientId) => {
 		const data = await getWithoutToken(`carrito/${clientId}`);
 		return data;
 	} catch (error) {
-		console.error('error', error);
+		return null;
 	}
 };

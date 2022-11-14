@@ -12,6 +12,6 @@ export const addProduct = async (productId, amount) => {
 
 		return data;
 	} catch (error) {
-		Message(error, 'warn');
+		Message('Error al agregar el producto al carrito', 'warn');
 	}
 };

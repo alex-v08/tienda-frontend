@@ -9,6 +9,9 @@ export const generateOrder = async (clientId) => {
 		Message('Compra realizada con éxito!', 'info');
 		window.location.href = '/cart';
 	} catch (error) {
-		Message(error, 'warn');
+		Message(
+			'Error al realizar la compra, vuelva a intentarlo luego',
+			'warn'
+		);
 	}
 };

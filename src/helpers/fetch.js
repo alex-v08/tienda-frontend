@@ -26,7 +26,7 @@ export const fetchWithoutToken = async (endpoint, method, request = null) => {
 		const data = await response.json();
 		return data;
 	} catch (error) {
-		throw new Error(error.message);
+		throw new Error(error);
 	}
 };
 
@@ -45,6 +45,6 @@ export const getWithoutToken = async (endpoint) => {
 		const data = await response.json();
 		return data;
 	} catch (error) {
-		throw new Error(error.message);
+		throw new Error(error);
 	}
 };

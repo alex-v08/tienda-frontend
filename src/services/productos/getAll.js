@@ -1,3 +1,4 @@
+import { Message } from '../../components';
 import { getWithoutToken } from '../../helpers/fetch';
 
 export const getAll = async () => {
@@ -5,6 +6,6 @@ export const getAll = async () => {
 		const data = await getWithoutToken('productos?sort=false');
 		return data;
 	} catch (error) {
-		console.error('error', error);
+		Message('Error al obtener los productos', 'warn');
 	}
 };

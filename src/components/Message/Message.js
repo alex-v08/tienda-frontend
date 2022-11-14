@@ -12,6 +12,6 @@ export const Message = (value, type) => {
 
 const closeMessage = () => {
 	let div = document.querySelector('#message');
-	div.remove();
+	if (!!div) div.remove();
 	clearInterval(timer);
 };
