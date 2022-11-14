@@ -1,15 +1,25 @@
+import { navigateTo } from '../../router/router';
 import './styles/card.css';
 
 export const Card = (card) => {
-	return `<div class="card">        
-            <figure>
-                <a href="/producto/${card.productoId}" >
+	let view = `<figure>
+                <button>
                     <img src="${card.image}" title="${card.nombre}" alt="imagen de ${card.nombre}" />
-                </a>
-            </figure>  
-            <footer>
-                <h2> ${card.nombre} </h2>
-                <strong>$ ${card.precio}</strong>
-            </footer>           
-		  </div>`;
+                </button>
+                </figure>  
+                <footer>
+                    <h2> ${card.nombre} </h2>
+                    <strong>$ ${card.precio}</strong>
+                </footer>`;
+
+	const divElement = document.createElement('div');
+	divElement.classList = 'card';
+	divElement.innerHTML = view;
+
+	let button = divElement.querySelector('button');
+	button.addEventListener('click', () => {
+		navigateTo(`/producto/${card.productoId}`);
+	});
+
+	return divElement;
 };

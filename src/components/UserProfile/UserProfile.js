@@ -11,8 +11,8 @@ export const UserProfile = () => {
                     <span>${user.rol.nombre}</span>
                 </div>
                 <img src="${avatar}" alt="userPick" title="userPick"/>	
-                <a href="/cart">
+                <button id="cart">
                     <img class="cart" src="${cart}" alt="carrito de compras" />
-                </a>
+                </button>
             </div>`;
 };

@@ -69,7 +69,7 @@ a {
 	color: inherit;
 }
 
-a.active {
+button.active {
 	color: var(--terciaryColor) !important;
 }
 

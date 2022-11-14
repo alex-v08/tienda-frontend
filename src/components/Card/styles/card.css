@@ -17,6 +17,10 @@
 	padding: 2rem;
 }
 
+.card button {
+	width: 100%;
+}
+
 .card footer strong {
 	font-size: 1.5rem;
 }

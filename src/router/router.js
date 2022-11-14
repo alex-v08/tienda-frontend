@@ -66,11 +66,12 @@ const getParams = (match) => {
 };
 
 export const activateLink = (activePage) => {
-	const navLinks = document.querySelectorAll('.navbar a');
+	const navLinks = document.querySelectorAll('.navbar button');
 	if (navLinks.length > 0) {
 		if (activePage !== '/') {
 			navLinks.forEach((link) => {
-				if (link.href.includes(`${activePage}`)) {
+				const { textContent } = link;
+				if ('/' + textContent.trim() == `${activePage}`) {
 					link.classList.add('active');
 				}
 			});

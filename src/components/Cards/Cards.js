@@ -5,12 +5,13 @@ import './styles/cards.css';
 export const Cards = (cards) => {
 	let view = Empty();
 
-	if (!!cards && cards.length > 0)
-		view = cards.map((card) => Card(card)).join(' ');
-
 	const divElement = document.createElement('div');
 	divElement.id = 'cards';
-	divElement.innerHTML = view;
+
+	if (!!cards && cards.length > 0)
+		view = cards.forEach((card) => {
+			divElement.appendChild(Card(card));
+		});
 
 	return divElement;
 };

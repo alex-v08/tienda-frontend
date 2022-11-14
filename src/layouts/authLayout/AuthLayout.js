@@ -22,17 +22,18 @@ export const AuthLayout = async (children) => {
 	main.appendChild(await children());
 
 	const nav = divElement.querySelectorAll('.navbar button');
-	console.log('nav', nav);
-	nav.forEach((el) => {
-		console.log('nav', el.href);
+	const cart = divElement.querySelector('#cart');
 
-		el.addEventListener('click', handleClick);
+	nav.forEach((el) => {
+		el.addEventListener('click', (e) => {
+			const { textContent } = e.target;
+			navigateTo(`/${textContent.trim()}`);
+		});
+	});
+
+	cart.addEventListener('click', () => {
+		navigateTo(`/cart`);
 	});
 
 	return divElement;
-};
-
-const handleClick = (e) => {
-	const { textContent } = e.target;
-	navigateTo(`/${textContent.trim()}`);
 };
