@@ -1,8 +1,7 @@
-import { user } from '../../../../Mock/user';
-import { deleteProduct, updateProduct } from '../../../../services/carrito';
+import { useItem } from './hook/useItem';
 import './styles/item.css';
 
-export const Item = (item) => {
+export const Item = async (item) => {
 	let view = `<div class='item'>
                 <img src="${item.image}" title="${item.nombre}" alt="producto"/>
                 <div class="info">
@@ -16,21 +15,5 @@ export const Item = (item) => {
                 <button id="btnClose" class="close"> x </button>           
             </div>`;
 
-	const divElement = document.createElement('div');
-	divElement.classList = 'home';
-	divElement.innerHTML = view;
-
-	const btnClose = divElement.querySelector('#btnClose');
-	btnClose.addEventListener('click', () => {
-		deleteProduct(user.id, item.productoId);
-		window.location.href = '/cart';
-	});
-
-	const inpAmount = divElement.querySelector('#inpAmount');
-	inpAmount.addEventListener('change', (event) => {
-		updateProduct(user.id, item.productoId, +event.target.value);
-		window.location.href = '/cart';
-	});
-
-	return divElement;
+	return useItem(view, item);
 };

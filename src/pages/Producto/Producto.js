@@ -1,13 +1,11 @@
-import { Cards, Message } from '../../components';
-import { getRandom, getById } from '../../services/productos';
-import { addProduct } from '../../services/carrito';
+import { getById } from '../../services/productos';
+import { useProducto } from './hook/useProducto';
 
 import cart from '../../assets/cartgreen.svg';
 import './styles/producto.css';
 
 export const Producto = async (params) => {
 	let producto = await getById(params.id);
-	let productos = await getRandom();
 
 	let view = `<article>                                             
                     <figure>
@@ -24,21 +22,9 @@ export const Producto = async (params) => {
                         </button>
                     </footer>                       
                 </article>
-                <section class="otros" id="otros">                        
-                </section>
+                <aside class="otros" id="otros">                        
+                </aside>
               `;
 
-	const divElement = document.createElement('div');
-	divElement.id = 'producto';
-	divElement.innerHTML = view;
-
-	const divProductos = divElement.querySelector('#otros');
-	divProductos.appendChild(Cards(productos));
-
-	const btn = divElement.querySelector('#btnAddToCart');
-	btn.addEventListener('click', async () => {
-		await addProduct(params.id, 1);
-	});
-
-	return divElement;
+	return useProducto(view, params);
 };

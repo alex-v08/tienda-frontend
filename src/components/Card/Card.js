@@ -1,4 +1,4 @@
-import { navigateTo } from '../../router/router';
+import { useCard } from './hook/useCard';
 import './styles/card.css';
 
 export const Card = (card) => {
@@ -12,14 +12,5 @@ export const Card = (card) => {
                     <strong>$ ${card.precio}</strong>
                 </footer>`;
 
-	const divElement = document.createElement('div');
-	divElement.classList = 'card';
-	divElement.innerHTML = view;
-
-	let button = divElement.querySelector('button');
-	button.addEventListener('click', () => {
-		navigateTo(`/producto/${card.productoId}`);
-	});
-
-	return divElement;
+	return useCard(view, card);
 };
