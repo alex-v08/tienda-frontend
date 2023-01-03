@@ -8,7 +8,8 @@
 	grid-template-areas:
 		'header header'
 		'nav nav'
-		'main main';
+		'main main'
+		'footer footer';
 	overflow-x: hidden;
 	font-family: 'Victor Mono';
 }
@@ -16,7 +17,8 @@
 .authLayout,
 .authLayout nav,
 .authLayout header,
-.authLayout main {
+.authLayout main,
+.authLayout .footerCore {
 	width: 100vw;
 }
 
@@ -39,9 +41,22 @@
 	z-index: 1;
 }
 
+.authLayout .footerCore {
+	grid-area: footer;
+	background-color: #191e2987;
+	height: var(--footerHeight);
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	padding: 2rem;
+	font-size: 2rem;
+}
+
 .authLayout main {
 	grid-area: main;
-	height: calc(100vh - var(--headerHeight) - var(--navHeight));
+	height: calc(
+		100% - var(--headerHeight) - var(--navHeight) - var(--footerHeight)
+	);
 }
 
 #btnTop {
@@ -65,10 +80,15 @@
 		grid-template-areas:
 			'header header'
 			'nav nav'
-			'main main';
+			'main main'
+			'footer footer';
 	}
 
 	.authLayout header {
 		filter: none;
+	}
+
+	.authLayout main {
+		height: 100%;
 	}
 }

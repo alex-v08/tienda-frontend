@@ -22,7 +22,8 @@ export const Producto = async (params) => {
                         </button>
                     </footer>                       
                 </article>
-                <aside class="otros" id="otros">                        
+                <aside class="otros" id="otros">   
+                <h3>Juegos relacionados</h3>                     
                 </aside>
               `;
 

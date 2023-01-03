@@ -13,6 +13,7 @@ export const AuthLayout = async (children) => {
                     <main id="children">                        
                     </main>
                     <button id="btnTop" title="ir arriba">↑</button>
+                    <footer class="footerCore">💀</footer>
     `;
 
 	return useAuthLayout(view, children);
