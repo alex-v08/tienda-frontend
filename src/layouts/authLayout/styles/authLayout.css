@@ -55,7 +55,7 @@
 .authLayout main {
 	grid-area: main;
 	height: calc(
-		100% - var(--headerHeight) - var(--navHeight) - var(--footerHeight)
+		100vh - var(--headerHeight) - var(--navHeight) - var(--footerHeight)
 	);
 }
 
