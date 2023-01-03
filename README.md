@@ -7,7 +7,7 @@ Trabajo final individual - Proyecto Software - Tienda de videojuegos
 ## Technologies
 
 Vanilla JavaScript (NO framework)
-CSS (NO framework)
+CSS (Puro - NO framework)
 HTML
 VITE
 
@@ -19,11 +19,18 @@ VITE
 3. Ejecutar npm run dev
 4. Abrir en Chrome (http://127.0.0.1:5173/)
 
-![Image text](https://postimg.cc/NLC6sk1Y)
-![Image text](https://postimg.cc/bDNn8Zrs)
-![Image text](https://postimg.cc/r0nrpqRg)
-![Image text](https://postimg.cc/SXG9w6yB)
-![Image text](https://postimg.cc/gwpRSSPy)
-![Image text](https://postimg.cc/HrXXtGFs)
-![Image text](https://postimg.cc/MvcyvfDB)
-![Image text](https://postimg.cc/tYLFPRSM)
+![Image text](https://i.postimg.cc/Qxh0q6CB/1.png)
+
+![Image text](https://i.postimg.cc/MT1m7R8b/2.png)
+
+![Image text](https://i.postimg.cc/qq0XjRJf/3.png)
+
+![Image text](https://i.postimg.cc/k50yRsLg/4.png)
+
+![Image text](https://i.postimg.cc/JhDqhv6F/5.png)
+
+![Image text](https://i.postimg.cc/ht3sccrx/6.png)
+
+![Image text](https://i.postimg.cc/BQpN7xPm/7.png)
+
+![Image text](https://i.postimg.cc/L8sDcnz2/8.png)
