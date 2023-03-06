@@ -18,7 +18,7 @@ export const Producto = async (params) => {
                         <div class="marca">${producto.marca}</div>
                         <button id="btnAddToCart" class="cart">
                             <span>+</span>
-                            <img src="${cart}" title="agregar al carrito" alt="agregar al carrito"/>
+                            <img src="${cart}" title="agregar al carrito 2" alt="agregar al carrito"/>
                         </button>
                     </footer>                       
                 </article>
